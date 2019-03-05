@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+build/
+out/
+text.txt
+*.iml
+githubticker.properties

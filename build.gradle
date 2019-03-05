@@ -1,0 +1,21 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.70"
+    id 'com.github.johnrengelman.shadow' version '5.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+shadowJar {
+    classifier = null
+    version = null
+    manifest {
+        attributes 'Main-Class': 'at.whlk.githubticker.GitHubTickerKt'
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "com.xenomachina:kotlin-argparser:2.0.7"
+}
