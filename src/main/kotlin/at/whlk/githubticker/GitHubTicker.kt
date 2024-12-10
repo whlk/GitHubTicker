@@ -25,7 +25,7 @@ class GitHubTicker {
         val today = LocalDate.parse(currentDate)
         val startDate = cal[0, 0]
         val offset = 0
-        var lastDate: LocalDate? = null
+        var lastDate: LocalDate? = LocalDate.now()
         var commitToday = false
         cal.forEachIndexed { x, y, date ->
             if (x < text.xSize && x + offset < cal.xSize) {
@@ -94,7 +94,7 @@ class GitHubTicker {
 
     private fun readText(textFile: String): Array2D<Boolean> {
         val text = File(textFile).readText()
-        val maxLength = (text.lines().maxBy { it.length }?.length ?: 52)
+        val maxLength = (text.lines().maxByOrNull { it.length }?.length ?: 52)
         val textMatrix = Array2D.invoke(maxLength, 7) { _, _ -> false }
 
         val lines = text.lines()

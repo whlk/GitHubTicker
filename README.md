@@ -17,7 +17,8 @@ Allows you to write something on your GitHub account activity overview.
     * Whitespace signifies that nothing should be commited on this day (light parts of the activity overview)
     * Every non-whitespace character signifies that a commit should be produced on this day (dark parts of the activity overview)
     * The file must have at most seven lines
-    * Each line can have arbitrary length, but the longer the lines the longer the script has to run in order to show the full text 
+    * Each line can have arbitrary length, but the longer the lines the longer the script has to run in order to show the full text
+    * See [`text.sample.txt`](text.sample.txt) for a sample
     ```
 
     x x xxx x   x   x   xxx 
